@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>115年蘭嶼消防防火闖關 App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#c62828" />
+
+  <!-- PWA 設定 -->
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      background: #fbe9e7;
+    }
+    header {
+      background: #c62828;
+      color: #fff;
+      padding: 18px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    main {
+      padding: 16px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    .icon {
+      font-size: 3rem;
+    }
+    button {
+      margin-top: 12px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 24px;
+      background: #ff9800;
+      color: #fff;
+      font-size: 1.05rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚒 小小消防員防火闖關</h1>
+  <p>115年蘭嶼鄉｜國小版</p>
+</header>
+
+<main>
+  <div class="card" id="q1">
+    <div class="icon">🏠</div>
+    <h2>Q1 家裡裝住警器是做什麼用的？</h2>
+    <button onclick="check(this, true)">有煙時會發出警報</button>
+    <button onclick="check(this, false)">裝飾用</button>
+    <button onclick="check(this, false)">讓房子更漂亮</button>
+  </div>
+
+  <div class="card" id="q2">
+    <div class="icon">🔥</div>
+    <h2>Q2 人離開用火現場時應該？</h2>
+    <button onclick="check(this, false)">不管它</button>
+    <button onclick="check(this, true)">把火關掉</button>
+    <button onclick="check(this, false)">請同學顧</button>
+  </div>
+
+  <div class="card" id="q3">
+    <div class="icon">🔌</div>
+    <h2>Q3 延長線可以插很多電器嗎？</h2>
+    <button onclick="check(this, false)">可以</button>
+    <button onclick="check(this, true)">不可以，會危險</button>
+    <button onclick="check(this, false)">只有晚上可以</button>
+  </div>
+
+  <div class="card" id="q4">
+    <div class="icon">🧯</div>
+    <h2>Q4 滅火器口訣是？</h2>
+    <button onclick="check(this, true)">拉、瞄、壓、掃</button>
+    <button onclick="check(this, false)">掃、壓、拉、瞄</button>
+    <button onclick="check(this, false)">瞄、拉、掃、壓</button>
+  </div>
+
+  <div class="card" id="q5">
+    <div class="icon">🚨</div>
+    <h2>Q5 火災時正確的做法是？</h2>
+    <button onclick="check(this, true)">低姿勢、沿牆走</button>
+    <button onclick="check(this, false)">搭電梯</button>
+    <button onclick="check(this, false)">躲房間玩手機</button>
+  </div>
+</main>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+
+</body>
+</html>
