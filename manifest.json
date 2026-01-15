@@ -1,0 +1,8 @@
+{
+  "name": "115年蘭嶼消防防火闖關",
+  "short_name": "消防闖關",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbe9e7",
+  "theme_color": "#c62828"
+}
